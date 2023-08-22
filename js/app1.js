@@ -7,7 +7,7 @@ function getInputValue(text){
 }
 
 const valueOfNum = getInputValue("Введіть ціле число, яке необхідно піднести до ступеня: ");
-const valueOfDigit = getInputValue("Введіть ступінь: ");
+const valueOfDegree = getInputValue("Введіть ступінь: ");
 
 function pow(num, degree) {
     if (num === 0 && degree <= 0) {
@@ -23,7 +23,7 @@ function pow(num, degree) {
     }
 }
 
-const result = pow(valueOfNum, valueOfDigit);
+const result = pow(valueOfNum, valueOfDegree);
 if (result === false){
     console.log("Це значення неможливо розрахувати.");
 } else {

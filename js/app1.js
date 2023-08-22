@@ -9,22 +9,23 @@ function getInputValue(text){
 const valueOfNum = getInputValue("Введіть ціле число, яке необхідно піднести до ступеня: ");
 const valueOfDigit = getInputValue("Введіть ступінь: ");
 
-function pow(num, degree){
-    if (num === 0 && degree <= 0){
-      return itIsError();
+function pow(num, degree) {
+    if (num === 0 && degree <= 0) {
+        return false;
     }
-    if (degree === 0){
+    if (degree === 0) {
         return 1;
     }
-    if (degree > 0){
+    if (degree > 0) {
         return num * pow(num, degree - 1);
     } else {
         return 1 / (num * pow(num, -degree - 1));
     }
 }
-function itIsError(){
-    console.log("Це значення неможливо розрахувати.");
-}
 
 const result = pow(valueOfNum, valueOfDigit);
-console.log(`${valueOfNum} ^ ${valueOfDigit} = ${result}`);
+if (result === false){
+    console.log("Це значення неможливо розрахувати.");
+} else {
+    console.log(`${valueOfNum} ^ ${valueOfDigit} = ${result}`);
+}

@@ -27,5 +27,5 @@ const result = pow(valueOfNum, valueOfDegree);
 if (result === false){
     console.log("Це значення неможливо розрахувати.");
 } else {
-    console.log(`${valueOfNum} ^ ${valueOfDigit} = ${result}`);
+    console.log(`${valueOfNum} ^ ${valueOfDegree} = ${result}`);
 }

@@ -1,7 +1,7 @@
-function getInputValue(text){
+function getInputValue(text) {
     let inputValue = parseFloat(prompt(text));
-    while (isNaN(inputValue) || !Number.isInteger(inputValue)) {
-        inputValue = parseInt(prompt("Ви ввели невірне значення. Введіть ціле число: "));
+    while (isNaN(inputValue) || inputValue % 1 !== 0) {
+        inputValue = parseFloat(prompt("Ви ввели невірне значення. Введіть ціле число: "));
     }
     return inputValue;
 }
@@ -24,7 +24,7 @@ function pow(num, degree) {
 }
 
 const result = pow(valueOfNum, valueOfDegree);
-if (result === false){
+if (result === false) {
     console.log("Це значення неможливо розрахувати.");
 } else {
     console.log(`${valueOfNum} ^ ${valueOfDegree} = ${result}`);
